@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Inter", sans-serif;
+    @apply bg-slate-950 text-slate-100;
+  }
+}
+
+.react-calendar {
+  @apply mx-auto rounded-md bg-slate-800 text-slate-100 !important;
+  border: none !important;
+}
+
+.react-calendar__tile--hasActive:enabled:hover,
+.react-calendar__tile--hasActive:enabled:focus,
+.react-calendar__tile:enabled:hover,
+.react-calendar__tile--active,
+.react-calendar__tile:enabled:focus {
+  @apply bg-slate-700 !important;
+}
+
+.react-calendar__navigation button:enabled:hover,
+.react-calendar__navigation button:enabled:focus {
+  @apply bg-slate-700 !important;
+}
+
+.react-calendar--selectRange .react-calendar__tile--hover {
+  @apply bg-slate-700 !important;
+}
+
+.react-calendar__tile--now {
+  @apply bg-slate-800 !important;
+}
+
+.react-calendar__tile--now:enabled:hover,
+.react-calendar__tile--now:enabled:focus {
+  @apply bg-yellow-500 !important;
+}
+
+.react-calendar__month-view__days__day--weekend {
+  @apply text-red-600 !important;
+}
+.react-calendar__tile:disabled,
+.react-calendar__navigation button:disabled {
+  @apply cursor-not-allowed bg-slate-900 !important;
+}
