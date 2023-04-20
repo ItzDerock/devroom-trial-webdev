@@ -117,6 +117,9 @@ export const postsRouter = createTRPCRouter({
         },
         where: {
           authorId: post.authorId,
+          id: {
+            not: post.id
+          }
         },
         include: {
           author: {
@@ -140,6 +143,9 @@ export const postsRouter = createTRPCRouter({
         where: {
           authorId: {
             not: post.authorId
+          },
+          id: {
+            not: post.id
           }
         },
         include: {
